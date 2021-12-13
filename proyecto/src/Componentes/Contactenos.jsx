@@ -3,15 +3,15 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
 export const Contactenos = () => {
-    
+
     return (
         <>
             <header>
-            <nav className="navbar navbar-expand-sm navbar-light colornav">
+                <nav className="navbar navbar-expand-sm navbar-light colornav">
                     <div className="container-fluid">
                         <a className="navbar-brand active" href="/">Home</a>
                     </div>
-            </nav>
+                </nav>
             </header>
             <main>
                 <div className="container-fluid">
@@ -19,8 +19,8 @@ export const Contactenos = () => {
                         <h1 className="text-sm-center fs-1"> Contactenos</h1>
                     </div>
                     <div className="ms-3">
-                        <p className="text-center m-3"> Señor(a) usuario, a continuación 
-                        se presenta el equipo de desarrollo
+                        <p className="text-center m-3"> Señor(a) usuario, a continuación
+                            se presenta el equipo de desarrollo
                         </p>
                         <br />
                         <div className="row m-1 ">

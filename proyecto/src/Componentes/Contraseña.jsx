@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 
 
 export const Contrasena = () => {
-    
+
     return (
         <>
             <header>
-            <nav className="navbar navbar-expand-sm navbar-light colornav">
+                <nav className="navbar navbar-expand-sm navbar-light colornav">
                     <div className="container-fluid">
                         <a className="navbar-brand active" href="/">Home</a>
                         <a className="navbar-brand active" href="/Contactenos">Contactenos</a>
                     </div>
-            </nav>
+                </nav>
             </header>
             <main>
                 <div className="container-fluid">
@@ -27,7 +27,7 @@ export const Contrasena = () => {
                         <div className="row m-3">
                             <label className="col-sm-2 col-form-label">Email</label>
                             <div className="col-sm-10 form-floating">
-                                <input className="form-control" type="email" id="txtemail2" name="email2" required minlength="8" maxlength="40"/>
+                                <input className="form-control" type="email" id="txtemail2" name="email2" required minlength="8" maxlength="40" />
                                 <label className="text-sm-start lh-sm ms-2" for="txtemail2">Indique su correo electronico</label>
                             </div>
                         </div>

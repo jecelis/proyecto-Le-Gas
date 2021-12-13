@@ -88,19 +88,19 @@ h1{
 }
 
 .image{
-  width               : 55vw;
+  width               : 30vw;
   height              : 59vh;
   float               : left;
 }
 
 .image2{
-  width               : 35vw;
+  width               : 20vw;
   height              : 25vh;
   float               : right;
 }
 
 .image3{
-  width               : 2.7vw;
+  width               : 2.0vw;
   height              : 2.7vh;
   float               : center;
 }
@@ -122,6 +122,13 @@ input[type=email]{
   border              : 2.5px solid #6C63FF!important;
 } 
 
+input[type=number]{
+  border              : 2.5px solid #6C63FF!important;
+} 
+
+input[type=date]{
+  border              : 2.5px solid #6C63FF!important;
+} 
 
 p, label{
   text-align          :  justify!important;
@@ -141,29 +148,18 @@ a{
   height              : 5vh;
 }
 
-input[type=button]{
-  border-color        : black;
-  border-width        : 1px;
-  border-radius       : 4px 4px 4px 4px;
-  -moz-border-radius  : 4px 4px 4px 4px;
-  color               : black;
-  cursor              : pointer;
-  display             : inline;
-  font-size           : 14px;
-  width               : 15vmin;
-  height              : 40px;
-  margin              : 0.5vmin 5.5vmin;
-  text-align          : center!important;
-  background          :cornflowerblue;
+.bord{
+  border              : 2.5px solid #6C63FF!important;
+} 
+.tama{
+  font-size: 10px !important;
 }
-
-input[type=button]:hover
-{
-  background          : #EC663B;
+.pagina{
+  margin              : 0vmax 21vmax!important;
 }
-
-input[type=number]{
-  width               : 14.5vmin;   
-  margin              : 1vmin 2vmin;
+.marb{
+  margin              : 8vmin 0vmax!important;
 }
-
+.marl{
+  margin              : 13vmin 0vmax!important;
+}

@@ -37,15 +37,15 @@ export const Registro = () => {
                             </div>
                             <label className="col-sm-2 col-form-label">Email</label>
                             <div className="col-sm-4 form-floating">
-                                <input className="form-control" type="email" id="txtemail" name="usuario1" required minlength="8" maxlength="40"/>
+                                <input className="form-control" type="email" id="txtemail" name="txtemail" required minlength="8" maxlength="40"/>
                                 <label className="text-sm-start lh-sm ms-2" for="txtemail">Indique su correo electronico</label>
                             </div>
                         </div>
-                        <div className="row m-3">
-                            <label className="col-sm-2 col-form-label">Usuario</label>
+                        <div className="row m-3 ">
+                            <label className="col-sm-2 col-form-label">Cedula</label>
                             <div className="col-sm-4 form-floating">
-                                <input className="form-control" type="text" id="txtusr1" name="usuario1" required minlength="8" maxlength="40"/>
-                                <label className="text-sm-start lh-sm ms-2" for="txtusr1">Indique su nombre de usuario</label>
+                                <input className="form-control" type="num" id="txtcedula" name="documento" required minlength="8" maxlength="40"/>
+                                <label className="text-sm-start lh-sm ms-2" for="txtcedula"># documento de identidad</label>
                             </div>
                             <label className="col-sm-2 col-form-label">Clave</label>
                             <div className="col-sm-3 form-floating">
@@ -56,7 +56,7 @@ export const Registro = () => {
                                 <img src={ojo} className="image3 mt-3" alt="ver"  />
                             </div>
                         </div>
-                        <div className="row m-3">
+                        <div className="row m-3 ">
                             <label className="col-sm-2 col-form-label">Placa 1</label>
                             <div className="col-sm-4 form-floating">
                                 <input className="form-control" type="text" id="txtplaca1" name="placa1" required minlength="6" maxlength="40"/>
@@ -79,7 +79,7 @@ export const Registro = () => {
                             <div class="form-check">
                                 <input className="form-check-input" type="checkbox" value="" id="flexCheck"/>
                                 <label className="form-check-label" for="flexCheck">
-                                    Declaro haber leido y caeptado las condiciones generales del programa y la normatividad
+                                    Declaro haber leido y aceptado las condiciones generales del programa y la normatividad
                                     vigente sobre tratamiento de datos personales
                                 </label>
                             </div>

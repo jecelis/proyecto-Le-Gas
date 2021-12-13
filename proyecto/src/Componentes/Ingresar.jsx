@@ -13,7 +13,9 @@ export const Ingresar = () => {
             <nav className="navbar navbar-expand-sm navbar-light colornav">
                     <div className="container-fluid">
                         <a className="navbar-brand active" href="/">Home</a>
-                        <a className="navbar-brand active" href="/Registro">Registro</a>
+                        <a className="navbar-brand active" href="/Registro">Registrarse</a>
+                        <a className="navbar-brand active" href="/Permisos">Admon</a>
+                        <a className="navbar-brand active" href="/Precios">U. Interno</a>
                         <a className="navbar-brand active" href="/Contactenos">Contactenos</a>
                     </div>
             </nav>
@@ -47,10 +49,10 @@ export const Ingresar = () => {
 
                             </div>
                         </div>
-                        <div className="position-absolute top-70 start-50 translate-middle mt-4">
+                        <div className="position-absolute top-70 start-50 translate-middle marb">
                             <button className="btn butt m-3" type="submit" name="botonEntrar">Entrar</button>
                             <Link to="/Registro">
-                                <button className="btn butt m-3" type="submit" name="botonRegistrar">Registrar</button>
+                                <button className="btn butt m-3" type="submit" name="botonRegistrar">Registrarse</button>
                             </Link>
                         </div>
                     </form>
@@ -58,7 +60,7 @@ export const Ingresar = () => {
             </main>
             <footer>
                 <div className="d-flex justify-content-center">
-                    <a className="mt-5" href="/Contrasena">Recuperar contraseña</a>
+                    <a className="marl" href="/Contrasena">Recuperar contraseña</a>
                 </div>
             </footer>
         </>
