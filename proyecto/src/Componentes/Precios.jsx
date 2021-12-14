@@ -17,8 +17,8 @@ export const Precios = () => {
             <a className="navbar-brand active" href="/Disponibilidad">
               Disponibilidad
             </a>
-            <a className="navbar-brand active" href="/Tanqueo">
-              Tanqueo
+            <a className="navbar-brand active" href="/Tanquear">
+              Tanquear
             </a>
             <a className="navbar-brand active" href="/Contactenos">
               Contactenos

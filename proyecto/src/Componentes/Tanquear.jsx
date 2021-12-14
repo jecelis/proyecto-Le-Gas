@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import imag1 from "../images/imag1.png";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 export const Tanquear = () => {
+  const [txtcant1, setTxtcant1] = useState('');
+  const [txtsald, setTxtsald] = useState('');
   return (
     <>
       <header>
@@ -11,6 +13,9 @@ export const Tanquear = () => {
           <div className="container-fluid">
             <a className="navbar-brand active" href="/">
               Home
+            </a>
+            <a className="navbar-brand active" href="/Precios">
+              Admon
             </a>
             <a className="navbar-brand active" href="/Recarga">
               Recarga
@@ -47,7 +52,7 @@ export const Tanquear = () => {
                   name="sald"
                   oncopy="return false;"
                   disabled
-                  value=""
+                  value={txtsald}
                   readonly
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtsald">
@@ -136,6 +141,7 @@ export const Tanquear = () => {
                   type="number"
                   id="txtcant1"
                   name="cantGalon"
+                  value ={txtcant1}
                   required
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtcant1">

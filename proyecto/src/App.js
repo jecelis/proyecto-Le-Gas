@@ -13,6 +13,7 @@ import { Informacion } from './Componentes/Informacion';
 import { Tanquear } from './Componentes/Tanquear';
 import { Recarga } from './Componentes/Recarga';
 import { Historial } from './Componentes/Historial';
+import { Permisos } from './Componentes/Permisos';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path='Tanquear' element={<Tanquear/>}/>
           <Route path='Recarga' element={<Recarga/>}/>
           <Route path='Historial' element={<Historial/>}/>
+          <Route path='Permisos' element={<Permisos/>}/>
         </Routes>
     </BrowserRouter>
     </>

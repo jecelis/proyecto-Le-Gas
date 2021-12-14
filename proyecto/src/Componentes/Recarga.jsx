@@ -15,9 +15,9 @@ export const Recarga = () => {
             <a className="navbar-brand active" href="/Tanquear">
               Tanquear
             </a>
-            <a className="navbar-brand active" href="/Historial">
+{/*             <a className="navbar-brand active" href="/Historial">
               Historial Usuario
-            </a>
+            </a> */}
             <a className="navbar-brand active" href="/Contactenos">
               Contactenos
             </a>
@@ -55,7 +55,7 @@ export const Recarga = () => {
                 </label>
               </div>
             </div>
-            <div className="row m-3">
+           {/*  <div className="row m-3">
               <label className="col-sm-3 col-form-label">
                 Puntos acumulados (Und)
               </label>
@@ -74,7 +74,7 @@ export const Recarga = () => {
                   Los puntos del usuario son
                 </label>
               </div>
-            </div>
+            </div> */}
             <div className="row m-3 ">
               <br />
               <hr />
@@ -135,7 +135,7 @@ export const Recarga = () => {
                   Transf. Bancaria
                 </label>
               </div>
-              <div className="form-check col-sm-2">
+              {/* <div className="form-check col-sm-2">
                 <input
                   className="form-check-input"
                   type="checkbox"
@@ -145,7 +145,7 @@ export const Recarga = () => {
                 <label className="form-check-label" for="flexCheck4">
                   Puntos
                 </label>
-              </div>
+              </div> */}
             </div>
 
             <div className="position-absolute top-70 start-50 translate-middle mt-4">

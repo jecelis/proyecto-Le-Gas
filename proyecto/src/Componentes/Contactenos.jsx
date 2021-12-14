@@ -9,7 +9,9 @@ export const Contactenos = () => {
             <header>
                 <nav className="navbar navbar-expand-sm navbar-light colornav">
                     <div className="container-fluid">
-                        <a className="navbar-brand active" href="/">Home</a>
+                        <a className="navbar-brand active" href="/Ingresar">Ingresar</a>
+                        <a className="navbar-brand active" href="/Tanquear">Tanquear</a>
+                        <a className="navbar-brand active" href="/Recarga">Recarga</a>
                     </div>
                 </nav>
             </header>
