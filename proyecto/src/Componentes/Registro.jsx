@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import log from "../images/log.png";
 import imag1 from "../images/imag1.png";
 import ojo from "../images/ojo.png";
@@ -6,12 +6,85 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 export const Registro = () => {
-    const [txtnom, setTxtnom] = useState('');
-    const [txtemail, setTxtemail] = useState('');
-    const [txtcedula, setTxtcedula] = useState('');
-    const [txtpsw, setTxtpsw] = useState('');
+  const [txtcedula, setTxtcedula] = useState("");
+  const [txtpsw, setTxtpsw] = useState("");
+  const [txtnom, setTxtnom] = useState("");
+  const [txtemail, setTxtemail] = useState("");
+  const [txtplaca1, setTtxtplaca1] = useState("");
+  const [txtplaca2, setTtxtplaca2] = useState("");
+
+  const [error, setError] = useState();
+  const [msgError, setmsgError] = useState();
+
+  const cambiarcedula = (e) => {
+    setTxtcedula(e.target.value);
+  };
+  const cambiarpas = (e) => {
+    setTxtpsw(e.target.value);
+  };
+  const cambiarnombre = (e) => {
+    setTxtnom(e.target.value);
+  };
+  const cambiaremail = (e) => {
+    setTxtemail(e.target.value);
+  };
+  const cambiarplaca1 = (e) => {
+    setTtxtplaca1(e.target.value);
+  };
+  const cambiarplaca2 = (e) => {
+    setTtxtplaca2(e.target.value);
+  };
+
+  const documento = useRef();
+  const contr = useRef();
+  const nom = useRef();
+  const correo = useRef();
+  const plac1 = useRef();
+  const plac2 = useRef();
+
+  function Enviar() {
+    const cedula = documento.current.value;
+    const clave = contr.current.value;
+    const nombre = nom.current.value;
+    const email = correo.current.value;
+    const placa1 = plac1.current.value;
+    const placa2 = plac2.current.value;
+    const saldo = 10000;
+
+    fetch("http://localhost:8081/user/guardar", {
+      headers: { "content-type": "application/json" },
+      method: "POST",
+      body: JSON.stringify({
+        cedula,
+        clave,
+        nombre,
+        email,
+        placa1,
+        placa2,
+        saldo,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.estado === "Ok") {
+          {
+            setError(true);
+            setmsgError(res.msg);
+            window.location.href = "/Ingresar";
+          }
+        } else {
+          setError(true);
+          setmsgError(res.msg);
+        }
+      });
+  }
   return (
     <>
+      {error && (
+        <div role="alert" className="alert alert-danger">
+          {msgError}
+        </div>
+      )}
       <header>
         <nav className="navbar navbar-expand-sm navbar-light colornav">
           <div className="container-fluid">
@@ -47,6 +120,10 @@ export const Registro = () => {
                   minlength="8"
                   maxlength="40"
                   value={txtnom}
+                  ref={nom}
+                  onChange={(evento) => {
+                    cambiarnombre(evento);
+                  }}
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtnom">
                   Indique su nombre
@@ -62,7 +139,11 @@ export const Registro = () => {
                   required
                   minlength="8"
                   maxlength="40"
-                  value ={txtemail}
+                  value={txtemail}
+                  ref={correo}
+                  onChange={(evento) => {
+                    cambiaremail(evento);
+                  }}
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtemail">
                   Indique su correo electronico
@@ -74,13 +155,17 @@ export const Registro = () => {
               <div className="col-sm-4 form-floating">
                 <input
                   className="form-control"
-                  type="num"
+                  type="number"
                   id="txtcedula"
-                  name="documento"
+                  name="document"
                   required
                   minlength="8"
                   maxlength="40"
-                  value ={txtcedula}
+                  value={txtcedula}
+                  ref={documento}
+                  onChange={(evento) => {
+                    cambiarcedula(evento);
+                  }}
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtcedula">
                   # documento de identidad
@@ -94,8 +179,12 @@ export const Registro = () => {
                   id="txtpsw"
                   name="contraseña"
                   required
-                  minlength="8"
-                  value ={txtpsw}
+                  minlength="6"
+                  value={txtpsw}
+                  ref={contr}
+                  onChange={(evento) => {
+                    cambiarpas(evento);
+                  }}
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtpsw">
                   Indique su contraseña
@@ -116,6 +205,11 @@ export const Registro = () => {
                   required
                   minlength="6"
                   maxlength="40"
+                  value={txtplaca1}
+                  ref={plac1}
+                  onChange={(evento) => {
+                    cambiarplaca1(evento);
+                  }}
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtplaca1">
                   Indique la placa de su vehiculo
@@ -128,9 +222,13 @@ export const Registro = () => {
                   type="text"
                   id="txtplaca2"
                   name="placa2"
-                  required
                   minlength="6"
                   maxlength="40"
+                  value={txtplaca2}
+                  ref={plac2}
+                  onChange={(evento) => {
+                    cambiarplaca2(evento);
+                  }}
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtplaca2">
                   Indique la placa de su vehiculo
@@ -138,19 +236,23 @@ export const Registro = () => {
               </div>
             </div>
             <div className="row m-3">
-              <label className="col-sm-2 col-form-label">Placa 3</label>
+              <label className="col-sm-2 col-form-label">Saldo</label>
               <div className="col-sm-4 form-floating">
                 <input
                   className="form-control"
                   type="text"
                   id="txtplaca3"
-                  name="placa3"
+                  name="saldo"
                   required
                   minlength="6"
                   maxlength="40"
+                  oncopy="return false;"
+                  disabled
+                  value=""
+                  readonly
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtplaca3">
-                  Indique la placa de su vehiculo
+                  Su saldo actual es de:
                 </label>
               </div>
             </div>
@@ -170,14 +272,19 @@ export const Registro = () => {
               </div>
             </div>
             <div className="position-absolute top-70 start-50 translate-middle mt-4">
-              <button className="btn butt m-3" type="submit" name="botonEnviar">
+              <button
+                className="btn butt m-3"
+                type="submit"
+                name="botonEnviar"
+                onClick={Enviar}
+              >
                 Enviar
               </button>
               <Link to="/Ingresar">
                 <button
                   className="btn butt m-3"
                   type="submit"
-                  name="botonCencelar"
+                  name="botonCancelar"
                 >
                   Cancelar
                 </button>

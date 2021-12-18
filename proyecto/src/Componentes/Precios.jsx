@@ -37,7 +37,7 @@ export const Precios = () => {
             </div>
           </div>
           <form action="" className="" method="POST">
-            <div className="row m-3">
+            {/* <div className="row m-3">
               <label className="col-sm-2 col-form-label">Fecha Inicial</label>
               <div className="col-sm-4 form-floating">
                 <input
@@ -64,7 +64,7 @@ export const Precios = () => {
                   Seleccione fecha
                 </label>
               </div>
-            </div>
+            </div> */}
             <div className="row m-3 ">
               <label className="col-sm-3 col-form-label">
                 Gasolina Corriente
@@ -87,7 +87,7 @@ export const Precios = () => {
               <hr />
               <br />
             </div>
-            <div className="row m-3">
+            {/* <div className="row m-3">
               <label className="col-sm-2 col-form-label">Fecha Inicial</label>
               <div className="col-sm-4 form-floating">
                 <input
@@ -114,7 +114,7 @@ export const Precios = () => {
                   Seleccione fecha
                 </label>
               </div>
-            </div>
+            </div> */}
             <div className="row m-3 ">
               <label className="col-sm-3 col-form-label">Gasolina Extra</label>
               <div className="col-sm-9 form-floating">
@@ -126,6 +126,26 @@ export const Precios = () => {
                   required
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtgext">
+                  precio (COP)
+                </label>
+              </div>
+            </div>
+            <div className="row m-3 ">
+              <br />
+              <hr />
+              <br />
+            </div>
+            <div className="row m-3 ">
+              <label className="col-sm-3 col-form-label">Diesel</label>
+              <div className="col-sm-9 form-floating">
+                <input
+                  className="form-control"
+                  type="number"
+                  id="txtdiesel"
+                  name="gasolinad"
+                  required
+                />
+                <label className="text-sm-start lh-sm ms-2" for="txtdiesel">
                   precio (COP)
                 </label>
               </div>

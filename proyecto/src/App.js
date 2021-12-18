@@ -21,19 +21,19 @@ function App() {
     <BrowserRouter>
       <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='Ingresar' element={<Ingresar/>}/>
+          <Route path='/Ingresar' element={<Ingresar/>}/>
           <Route path='Registro' element={<Registro/>}/>
-          <Route path='Contrasena' element={<Contrasena/>}/>
-          <Route path='Contactenos' element={<Contactenos/>}/>
-          <Route path='Nomina' element={<Nomina/>}/>
-          <Route path='Precios' element={<Precios/>}/>
-          <Route path='Disponibilidad' element={<Disponibilidad/>}/>
-          <Route path='Tanqueo' element={<Tanqueo/>}/>
-          <Route path='Informacion' element={<Informacion/>}/>
-          <Route path='Tanquear' element={<Tanquear/>}/>
-          <Route path='Recarga' element={<Recarga/>}/>
-          <Route path='Historial' element={<Historial/>}/>
-          <Route path='Permisos' element={<Permisos/>}/>
+          <Route path='/Contrasena' element={<Contrasena/>}/>
+          <Route path='/Contactenos' element={<Contactenos/>}/>
+          <Route path='/Nomina' element={<Nomina/>}/>
+          <Route path='/Precios' element={<Precios/>}/>
+          <Route path='/Disponibilidad' element={<Disponibilidad/>}/>
+          <Route path='/Tanqueo' element={<Tanqueo/>}/>
+          <Route path='/Informacion' element={<Informacion/>}/>
+          <Route path='/Tanquear' element={<Tanquear/>}/>
+          <Route path='/Recarga' element={<Recarga/>}/>
+          <Route path='/Historial' element={<Historial/>}/>
+          <Route path='/Permisos' element={<Permisos/>}/>
         </Routes>
     </BrowserRouter>
     </>

@@ -5,8 +5,46 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 export const Ingresar = () => {
-  const [txtusr, setTxtusr] = useState("");
+  const [txtcedula, setTtxtcedula] = useState("");
   const [txtpsw, setTtxtpsw] = useState("");
+  const [error, setError] = useState();
+  const [msgError, setmsgError] = useState();
+
+  const cambiarinput = (e) => {
+    setTtxtcedula(e.target.value);
+  };
+
+  const cambiarclave = (e) => {
+    setTtxtpsw(e.target.value);
+  };
+  function Ingresar() {
+    var cedula = document.getElementById("txtcedula").value;
+    var clave = document.getElementById("txtpsw").value;
+
+    fetch(`http://localhost:8081/ingresar/`, {
+      headers: { "content-type": "application/json" }, //Qué voy a enviar
+      method: "POST", //Cómo lo voy a enviar
+      body: JSON.stringify({
+        //Información a enviar
+        cedula,
+        clave,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.estado === "Ok") {
+          {
+            window.location.href = "/Tanquear/";
+          }
+        } else {
+          setError(true);
+          setmsgError(res.msg);
+        }
+      });
+    console.log(cedula);
+    console.log(clave);
+  }
+
   return (
     <>
       <header>
@@ -42,20 +80,23 @@ export const Ingresar = () => {
           </div>
           <form action="" className="" method="POST">
             <div className="row m-3">
-              <label className="col-sm-2 col-form-label">Usuario</label>
+              <label className="col-sm-2 col-form-label">Cedula</label>
               <div className="col-sm-10 form-floating">
                 <input
                   className="form-control"
-                  type="text"
-                  id="txtusr"
-                  name="usuario"
-                  value={txtusr}
+                  type="number"
+                  id="txtcedula"
+                  name="cedula"
+                  value={txtcedula}
+                  onChange={(evento) => {
+                    cambiarinput(evento);
+                  }}
                   required
                   minlength="8"
                   maxlength="40"
                 />
-                <label className="text-sm-start lh-sm ms-2" for="txtusr">
-                  Indique su nombre de usuario
+                <label className="text-sm-start lh-sm ms-2" for="txtcedula">
+                  Indique su numero de cedula
                 </label>
               </div>
             </div>
@@ -68,6 +109,9 @@ export const Ingresar = () => {
                   id="txtpsw"
                   name="contraseña"
                   value={txtpsw}
+                  onChange={(evento) => {
+                    cambiarclave(evento);
+                  }}
                   required
                   minlength="8"
                 />
@@ -80,16 +124,18 @@ export const Ingresar = () => {
               </div>
             </div>
             <div className="position-absolute top-70 start-50 translate-middle marb">
-              <Link to="/Tanquear">
-                <button
-                  className="btn butt m-3"
-                  type="submit"
-                  name="botonEntrar"
-                >
-                  Entrar
-                </button>
-              </Link>
-{/*               <Link to="/Registro">
+              <button
+                className="btn butt m-3"
+                type="submit"
+                name="botonEntrar"
+                onClick={Ingresar}
+              >
+                Ingresar
+              </button>
+              {/*               <Link to="#">
+
+              </Link> */}
+              {/*               <Link to="/Registro">
                 <button
                   className="btn butt m-3"
                   type="submit"
