@@ -10,8 +10,8 @@ export const Nomina = () => {
             <a className="navbar-brand active" href="/">
               Home
             </a>
-            <a className="navbar-brand active" href="/Permisos">
-              Permisos
+            <a className="navbar-brand active" href="/RegNomina">
+              Registro Nomina
             </a>
             <a className="navbar-brand active" href="/Gestion">
               Gestion

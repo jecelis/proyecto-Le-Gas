@@ -6,12 +6,12 @@ import { Registro } from './Componentes/Registro';
 import { Contrasena } from './Componentes/Contraseña';
 import { Contactenos } from './Componentes/Contactenos';
 import { Nomina } from './Componentes/Nomina';
-import { Gestion, Precios } from './Componentes/Gestion';
+import { Gestion } from './Componentes/Gestion';
 import { Informacion } from './Componentes/Informacion';
 import { Tanquear } from './Componentes/Tanquear';
 import { Recarga } from './Componentes/Recarga';
 import { Historial } from './Componentes/Historial';
-import { Permisos } from './Componentes/Permisos';
+import { RegNomina } from './Componentes/RegNomina';
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
           <Route path='/Tanquear' element={<Tanquear/>}/>
           <Route path='/Recarga' element={<Recarga/>}/>
           <Route path='/Historial' element={<Historial/>}/>
-          <Route path='/Permisos' element={<Permisos/>}/>
+          <Route path='/RegNomina' element={<RegNomina/>}/>
         </Routes>
     </BrowserRouter>
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-export const Permisos = () => {
+export const RegNomina = () => {
   return (
     <>
       <header>
@@ -30,7 +30,7 @@ export const Permisos = () => {
           <div className="m-2 p-2">
             <h1 className="text-sm-center fs-1 p-3">
               {" "}
-              Permisos Tanqueo Le Gas
+              Registro Empleados Le Gas
             </h1>
           </div>
           <form action="">

@@ -114,7 +114,7 @@ export const Gestion = () => {
         <div className="container-fluid">
           <div className="d-flex align-items-center">
             <div className="flex-grow-1 me-1">
-              <h1 className="text-sm-end fs-1"> Precios Le Gas</h1>
+              <h1 className="text-sm-end fs-1"> Gestión Le Gas</h1>
             </div>
             <div className="flex-shrink-1">
               <img src={imag1} className="image2" alt="imag2" />
