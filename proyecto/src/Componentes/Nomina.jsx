@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-
 export const Nomina = () => {
   return (
     <>
@@ -14,14 +13,11 @@ export const Nomina = () => {
             <a className="navbar-brand active" href="/Permisos">
               Permisos
             </a>
-            <a className="navbar-brand active" href="/Disponibilidad">
-              Disponibilidad
+            <a className="navbar-brand active" href="/Gestion">
+              Gestion
             </a>
-            <a className="navbar-brand active" href="/Precios">
-              Precios
-            </a>
-            <a className="navbar-brand active" href="/Tanqueo">
-              Tanqueo
+            <a className="navbar-brand active" href="/Tanquear">
+              Tanquear
             </a>
             <a className="navbar-brand active" href="/Contactenos">
               Contactenos
@@ -92,7 +88,7 @@ export const Nomina = () => {
           </div>
         </div>
         <div>
-            <p className="ms-3 tama">*Usted tiene permisos como administrador</p>
+          <p className="ms-3 tama">*Usted tiene permisos como administrador</p>
         </div>
       </main>
     </>

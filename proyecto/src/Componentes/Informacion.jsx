@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+
 
 export const Informacion = () => {
   return (
@@ -11,14 +11,11 @@ export const Informacion = () => {
             <a className="navbar-brand active" href="/">
               Home
             </a>
-            <a className="navbar-brand active" href="/Precios">
-              Precios
+            <a className="navbar-brand active" href="/Gestion">
+              Gestion
             </a>
-            <a className="navbar-brand active" href="/Disponibilidad">
-              Disponibilidad
-            </a>
-            <a className="navbar-brand active" href="/Tanqueo">
-              Tanqueo
+            <a className="navbar-brand active" href="/Tanquear">
+              Tanquear
             </a>
             <a className="navbar-brand active" href="/Contactenos">
               Contactenos

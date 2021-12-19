@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
-import log from "../images/log.png";
+import React, { useState, useRef } from "react";
 import imag1 from "../images/imag1.png";
 import ojo from "../images/ojo.png";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -51,7 +50,7 @@ export const Registro = () => {
     const placa2 = plac2.current.value;
     const saldo = 10000;
 
-    fetch("http://localhost:8081/user/guardar", {
+    fetch("http://localhost:8081/guardar", {
       headers: { "content-type": "application/json" },
       method: "POST",
       body: JSON.stringify({
@@ -70,7 +69,9 @@ export const Registro = () => {
           {
             setError(true);
             setmsgError(res.msg);
-            window.location.href = "/Ingresar";
+            {
+              window.location.href = "/Ingresar";
+            }
           }
         } else {
           setError(true);
@@ -80,12 +81,12 @@ export const Registro = () => {
   }
   return (
     <>
-      {error && (
-        <div role="alert" className="alert alert-danger">
-          {msgError}
-        </div>
-      )}
       <header>
+        {error && (
+          <div role="alert" className="alert alert-danger">
+            {msgError}
+          </div>
+        )}
         <nav className="navbar navbar-expand-sm navbar-light colornav">
           <div className="container-fluid">
             <a className="navbar-brand active" href="/">

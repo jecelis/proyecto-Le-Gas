@@ -6,9 +6,7 @@ import { Registro } from './Componentes/Registro';
 import { Contrasena } from './Componentes/Contraseña';
 import { Contactenos } from './Componentes/Contactenos';
 import { Nomina } from './Componentes/Nomina';
-import { Precios } from './Componentes/Precios';
-import { Disponibilidad } from './Componentes/Disponibilidad';
-import { Tanqueo } from './Componentes/Tanqueo';
+import { Gestion, Precios } from './Componentes/Gestion';
 import { Informacion } from './Componentes/Informacion';
 import { Tanquear } from './Componentes/Tanquear';
 import { Recarga } from './Componentes/Recarga';
@@ -22,13 +20,11 @@ function App() {
       <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/Ingresar' element={<Ingresar/>}/>
-          <Route path='Registro' element={<Registro/>}/>
+          <Route path='/Registro' element={<Registro/>}/>
           <Route path='/Contrasena' element={<Contrasena/>}/>
           <Route path='/Contactenos' element={<Contactenos/>}/>
           <Route path='/Nomina' element={<Nomina/>}/>
-          <Route path='/Precios' element={<Precios/>}/>
-          <Route path='/Disponibilidad' element={<Disponibilidad/>}/>
-          <Route path='/Tanqueo' element={<Tanqueo/>}/>
+          <Route path='/Gestion' element={<Gestion/>}/>
           <Route path='/Informacion' element={<Informacion/>}/>
           <Route path='/Tanquear' element={<Tanquear/>}/>
           <Route path='/Recarga' element={<Recarga/>}/>

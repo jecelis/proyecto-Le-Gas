@@ -15,9 +15,6 @@ export const Recarga = () => {
             <a className="navbar-brand active" href="/Tanquear">
               Tanquear
             </a>
-{/*             <a className="navbar-brand active" href="/Historial">
-              Historial Usuario
-            </a> */}
             <a className="navbar-brand active" href="/Contactenos">
               Contactenos
             </a>
@@ -55,26 +52,6 @@ export const Recarga = () => {
                 </label>
               </div>
             </div>
-           {/*  <div className="row m-3">
-              <label className="col-sm-3 col-form-label">
-                Puntos acumulados (Und)
-              </label>
-              <div className="col-sm-6 form-floating">
-                <input
-                  className="form-control"
-                  type="number"
-                  id="txtpuntos"
-                  name="puntos"
-                  oncopy="return false;"
-                  disabled
-                  value=""
-                  readonly
-                />
-                <label className="text-sm-start lh-sm ms-2" for="txtpuntos">
-                  Los puntos del usuario son
-                </label>
-              </div>
-            </div> */}
             <div className="row m-3 ">
               <br />
               <hr />
@@ -135,25 +112,10 @@ export const Recarga = () => {
                   Transf. Bancaria
                 </label>
               </div>
-              {/* <div className="form-check col-sm-2">
-                <input
-                  className="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="flexCheck4"
-                />
-                <label className="form-check-label" for="flexCheck4">
-                  Puntos
-                </label>
-              </div> */}
             </div>
 
             <div className="position-absolute top-70 start-50 translate-middle mt-4">
-              <button
-                className="btn butt m-3"
-                type="submit"
-                name="botonPagar"
-              >
+              <button className="btn butt m-3" type="submit" name="botonPagar">
                 Pagar
               </button>
               <Link to="/Ingresar">

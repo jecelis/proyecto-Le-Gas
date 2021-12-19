@@ -4,8 +4,8 @@ import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 export const Tanquear = () => {
-  const [txtcant1, setTxtcant1] = useState('');
-  const [txtsald, setTxtsald] = useState('');
+  const [txtcant1, setTxtcant1] = useState("");
+  const [txtsald, setTxtsald] = useState("");
   return (
     <>
       <header>
@@ -14,8 +14,8 @@ export const Tanquear = () => {
             <a className="navbar-brand active" href="/">
               Home
             </a>
-            <a className="navbar-brand active" href="/Precios">
-              Admon
+            <a className="navbar-brand active" href="/Gestion">
+              Gestion
             </a>
             <a className="navbar-brand active" href="/Recarga">
               Recarga
@@ -66,9 +66,7 @@ export const Tanquear = () => {
               <br />
             </div>
             <div className="row m-3">
-              <label className="col-sm-2 col-form-label">
-                P. Extra (COP)
-              </label>
+              <label className="col-sm-2 col-form-label">P. Extra (COP)</label>
               <div className="col-sm-4 form-floating">
                 <input
                   className="form-control"
@@ -141,7 +139,7 @@ export const Tanquear = () => {
                   type="number"
                   id="txtcant1"
                   name="cantGalon"
-                  value ={txtcant1}
+                  value={txtcant1}
                   required
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtcant1">

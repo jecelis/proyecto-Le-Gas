@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import log from "../images/log.png";
 import ojo from "../images/ojo.png";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
 
 export const Ingresar = () => {
-  const [txtcedula, setTtxtcedula] = useState("");
-  const [txtpsw, setTtxtpsw] = useState("");
+  const [txtcedula, setTtxtcedula] = useState();
+  const [txtpsw, setTtxtpsw] = useState();
   const [error, setError] = useState();
   const [msgError, setmsgError] = useState();
 
@@ -21,7 +20,7 @@ export const Ingresar = () => {
     var cedula = document.getElementById("txtcedula").value;
     var clave = document.getElementById("txtpsw").value;
 
-    fetch(`http://localhost:8081/ingresar/`, {
+    fetch(`http://localhost:8081/ingresar`, {
       headers: { "content-type": "application/json" }, //Qué voy a enviar
       method: "POST", //Cómo lo voy a enviar
       body: JSON.stringify({
@@ -34,9 +33,14 @@ export const Ingresar = () => {
       .then((res) => {
         if (res.estado === "Ok") {
           {
-            window.location.href = "/Tanquear/";
+            setError(true);
+            setmsgError(res.msg);
+            {
+              window.location.href = "/Tanquear";
+            }
           }
         } else {
+          <h1>Estoy aqui</h1>;
           setError(true);
           setmsgError(res.msg);
         }
@@ -48,6 +52,11 @@ export const Ingresar = () => {
   return (
     <>
       <header>
+        {error && (
+          <div role="alert" className="alert alert-danger">
+            {msgError}
+          </div>
+        )}
         <nav className="navbar navbar-expand-sm navbar-light colornav">
           <div className="container-fluid">
             <a className="navbar-brand active" href="/">
@@ -56,12 +65,6 @@ export const Ingresar = () => {
             <a className="navbar-brand active" href="/Registro">
               Registrarse
             </a>
-            {/*             <a className="navbar-brand active" href="/Permisos">
-              Admon
-            </a>
-            <a className="navbar-brand active" href="/Precios">
-              U. Interno
-            </a> */}
             <a className="navbar-brand active" href="/Contactenos">
               Contactenos
             </a>
@@ -113,7 +116,7 @@ export const Ingresar = () => {
                     cambiarclave(evento);
                   }}
                   required
-                  minlength="8"
+                  minlength="5"
                 />
                 <label className="text-sm-start lh-sm ms-2" for="txtpsw">
                   Indique su contraseña
@@ -132,18 +135,6 @@ export const Ingresar = () => {
               >
                 Ingresar
               </button>
-              {/*               <Link to="#">
-
-              </Link> */}
-              {/*               <Link to="/Registro">
-                <button
-                  className="btn butt m-3"
-                  type="submit"
-                  name="botonRegistrar"
-                >
-                  Registrarse
-                </button>
-              </Link> */}
             </div>
           </form>
         </div>
