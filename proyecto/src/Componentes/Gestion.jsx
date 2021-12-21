@@ -65,11 +65,9 @@ export const Gestion = () => {
       .then((res) => {
         if (res.estado === "Ok") {
           {
+            console.log(res.estado)
             setError(true);
             setmsgError(res.msg);
-            {
-              window.location.href = "/Ingresar";
-            }
           }
         } else {
           setError(true);
@@ -103,6 +101,9 @@ export const Gestion = () => {
             </a>
             <a className="navbar-brand active" href="/Tanquear">
               Tanquear
+            </a>
+            <a className="navbar-brand active" href="/RegNomina">
+              Registrar Empleados
             </a>
             <a className="navbar-brand active" href="/Contactenos">
               Contactenos

@@ -40,7 +40,6 @@ export const Ingresar = () => {
             }
           }
         } else {
-          <h1>Estoy aqui</h1>;
           setError(true);
           setmsgError(res.msg);
         }

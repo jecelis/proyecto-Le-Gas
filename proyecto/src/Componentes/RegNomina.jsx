@@ -55,7 +55,7 @@ export const RegNomina = () => {
             setError(true);
             setmsgError(res.msg);
             {
-              window.location.href = "/Ingresar";
+              window.location.href = "/RegNomina";
             }
           }
         } else {
