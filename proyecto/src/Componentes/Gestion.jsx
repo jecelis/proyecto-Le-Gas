@@ -49,7 +49,7 @@ export const Gestion = () => {
     const stockExtra = stockEx.current.value;
     const stockDiesel = stockDi.current.value;
 
-    fetch("http://localhost:8081/Requisitos", {
+    fetch("http://localhost:8081/Gestion", {
       headers: { "content-type": "application/json" },
       method: "POST",
       body: JSON.stringify({

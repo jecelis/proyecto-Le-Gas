@@ -12,7 +12,7 @@ export const Home = () => {
                     <div className="container-fluid">
                         <a className="navbar-brand active" href="Home">Home</a>
                         <a className="navbar-brand active" href="Ingresar">Ingresar</a>
-                        <a className="navbar-brand active" href="#">Contactenos</a>
+                        <a className="navbar-brand active" href="/Contactenos">Contactenos</a>
                     </div>
                 </nav>
             </header>

@@ -163,3 +163,13 @@ a{
 .marl{
   margin              : 13vmin 0vmax!important;
 }
+
+.butt1{
+  background: #C4C4C4!important;
+  border-color        : black;
+  border-radius       : 50px!important;
+  color               : black!important;
+  width               : 8vw;
+  height              : 6vh;
+  margin-top          : 2vh!important;
+}
